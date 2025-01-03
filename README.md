@@ -1,28 +1,37 @@
 # tenda_4g03-4g06_vuln
-vuln__firm_version 
+## vuln__firm_version 
 4g03 <= V16.03.07.21_multi
+
 4g03 <= V16.03.07.21_multi
 
 # Vulnerability Reproduction
-Firmware example ：
+## Firmware example 
 https://down.tendacn.com/uploadfile/4G03/US_4G03V1.0re_V16.03.07.21_multi_TDE01.zip
 
 ## system emulate:
 ## Host
 sudo brctl addbr br0
+
 sudo ifconfig br0 192.168.1.137/24 up
+
 sudo tunctl -t tap0
+
 sudo ifconfig tap0 192.168.1.138/24 up
+
 sudo brctl addif br0 tap0
 
 ## Guest
 ip link add br0 type dummy
+
 ifconfig eth0 192.168.1.139/24 up
+
 ifconfig br0 192.168.1.140/24 up
 
 ## Mount file system
 mount -o bind /dev ./squashfs-root/dev/
+
 mount -t proc /proc/ ./squashfs-root/proc/
+
 chroot squashfs-root /bin/sh
 
 # Emulation
