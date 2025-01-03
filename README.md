@@ -2,7 +2,7 @@
 ## vuln__firm_version 
 4g03 <= V16.03.07.21_multi
 
-4g03 <= V16.03.07.21_multi
+4g06 <= V16.03.07.21_multi
 
 # Vulnerability Reproduction
 ## Firmware example 
